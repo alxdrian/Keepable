@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keepable</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <header class="flex-center space-between">
+    <img src="./assets/keepable.svg">
+    <p class="text-header">Welcome to {keepable}</p>
+  </header>
+
+  <div class="border-top flex-row max-height">
+
+    <div id="nav">
+      <div class="body-nav">
+        <a href="index.html" class="flex-center nav-options nav-options-color">
+          <img src="./assets/notes.svg" class="margin-left-16 margin-right-20">Notes
+        </a>
+        <a href="trash.html" class="flex-center nav-options">
+          <img src="./assets/trash-nav.svg" class="margin-left-16 margin-right-20">Trash
+        </a>
+      </div>
+    </div>
+    <div class="border-left content flex-col">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="modal-pin"><div></div></div>
+          <input class="modal-title" placeholder="Title" type="text">
+          <textarea class="modal-text" placeholder="Take a note..." type="text"></textarea>
+          <div class="modal--buttons">
+            <div class="modal--btn-container">
+              <div class="modal-palete">
+                <img src="./assets/palette.svg" />
+              </div>
+              <div class="modal-trash">
+                <img src="./assets/trash.svg" />
+              </div>
+            </div>
+            <span class="modal-close-button"><strong>Keep it!</strong></span>
+          </div>
+        </div>
+      </div>
+      <form class="flex-col input-container">
+        <input class="input__content" id="note_title" name="title" placeholder="The title for my new note">
+        <textarea class="input__content" id="note_input" name="body" cols="10" rows="2"
+          placeholder="This is the body for the new note"></textarea>
+        <div class="form-buttons">
+          <div class="btn btn--icon" id="palette">
+            <img src="./assets/palette.svg" />
+          </div>
+          <input type="hidden" id="bgcolor" name="color" value="white">
+          <input type="hidden" id="pinned" name="pinned" value="false">
+          <strong><button class="link">Keep it!</button></strong>
+        </div>
+      </form>
+      <div class="empty">
+        <h3 class="label heading--sm" id="remove1">PINNED</h3>
+        <div class="pinnednotes--container"></div>
+
+        <h3 class="label heading--sm" id="remove2">OTHERS</h3>
+        <div class="listnotes--container"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/notes.js"></script>    
+  <script src="./scripts/modal.js"></script>
+</body>
+
+</html>

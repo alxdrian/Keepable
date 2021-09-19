@@ -1,0 +1,128 @@
+.note {
+  width: 260px;
+  height: 260px;
+  background-color: var(--note-01);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.note--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.note--content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note--btn-container {
+  display: flex;
+  gap: 9px;
+}
+
+.note--btn-pin {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.listnotes--container {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pinnednotes--container {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.palette--container {
+  bottom: 60px;
+  left: 20px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 540px) {
+  .listnotes--container {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .pinnednotes--container {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .note {
+    width: 48%;
+    height: 200px;
+    background-color: var(--note-01);
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .palette--container {
+    bottom: -55px;
+    left: 10px;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .note {
+    width: 98%;
+    height: 150px;
+    background-color: var(--note-01);
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .note--btn-container {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .palette--container {
+    top: 55px;
+    left: calc(100% - 205px);
+    left: none;
+    z-index: 1;
+  }
+
+  .note--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: calc(100% - 40px);
+  }
+}

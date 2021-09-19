@@ -1,0 +1,28 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--focus {
+  background-color: #999b9e;
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn--icon {
+  width: 36px;
+  height: 36px;
+}
